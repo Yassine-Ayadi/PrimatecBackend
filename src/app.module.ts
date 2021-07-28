@@ -6,8 +6,7 @@ import { StudentController } from './student/student.controller';
 import { StudentModule } from './student/student.module';
 
 @Module({
-  imports: [StudentModule
-  ],
+  imports: [StudentModule],
   
   controllers: [AppController],
   providers: [AppService],
