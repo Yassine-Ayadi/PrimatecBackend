@@ -6,7 +6,7 @@ import { StudentController } from './student/student.controller';
 import { StudentModule } from './student/student.module';
 
 @Module({
-  imports: [StudentModule,
+  imports: [StudentModule/*,
    TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',//process.env.DB_HOST,
@@ -16,7 +16,7 @@ import { StudentModule } from './student/student.module';
       database: 'nest-student',//process.env.DB_NAME,
       entities: ["dist/**/**/*.entity{.ts,.js}"],
       synchronize: true,
-    })
+    })*/
   ],
   
   controllers: [AppController],
