@@ -6,7 +6,7 @@ import { StudentController } from './student/student.controller';
 import { StudentModule } from './student/student.module';
 
 @Module({
-  imports: [StudentModule,
+  imports: [StudentModule,StudentService,
    TypeOrmModule.forRoot({
       type: 'mysql',
       host: '192.168.1.7',//process.env.DB_HOST,
