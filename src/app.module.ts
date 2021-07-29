@@ -20,7 +20,7 @@ import { StudentModule } from './student/student.module';
   ],
   
   controllers: [AppController],
-  providers: [AppService,StudentService],
+  providers: [AppService],
 })
 export class AppModule {}
 
