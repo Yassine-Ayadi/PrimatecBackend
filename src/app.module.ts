@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { StudentController } from './student/student.controller';
 import { StudentModule } from './student/student.module';
 
+@Global
 @Module({
   imports: [StudentModule,
    TypeOrmModule.forRoot({
