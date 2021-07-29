@@ -30,6 +30,7 @@ pipeline {
       steps {
         echo 'deploying the application...'
           sh 'curl http://192.168.1.7:3306'
+          sh'npm run start'
        // sh 'docker build -t angularproject:latest .'
 
       }
