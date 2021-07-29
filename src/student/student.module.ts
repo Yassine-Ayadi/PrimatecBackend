@@ -4,6 +4,7 @@ import { StudentEntity } from './entities/student.entity';
 import { StudentController } from './student.controller';
 import { StudentService } from './student.service';
 
+@Global
 @Module({
   imports: [
     TypeOrmModule.forFeature([StudentEntity]),
