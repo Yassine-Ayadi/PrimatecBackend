@@ -6,7 +6,7 @@ import { StudentController } from './student/student.controller';
 import { StudentModule } from './student/student.module';
 
 @Module({
-  imports: [StudentModule,StudentService,
+  imports: [StudentModule,
    TypeOrmModule.forRoot({
       type: 'mysql',
       host: '192.168.1.7',//process.env.DB_HOST,
@@ -20,7 +20,7 @@ import { StudentModule } from './student/student.module';
   ],
   
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService,StudentService],
 })
 export class AppModule {}
 
