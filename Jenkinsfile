@@ -13,7 +13,7 @@ pipeline {
          sh 'npm install'
          //sh 'rm -rf ./dist'
         // sh 'npm run build'
-         sh 'curl http://localhost:8081'
+         sh 'telnet 127.0.0.1 8081'
          sh 'npm run start:prod'
         
       }
