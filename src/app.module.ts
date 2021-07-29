@@ -12,7 +12,7 @@ import { StudentModule } from './student/student.module';
       host: 'localhost',//process.env.DB_HOST,
       port: 3306, //parseInt(process.env.DB_PORT),
       username: 'root', //process.env.DB_USERNAME,
-      password: '',// process.env.DB_PASSWORD,
+      password: 'password123',// process.env.DB_PASSWORD,
       database: 'nest-student',//process.env.DB_NAME,
       entities: ["dist/**/**/*.entity{.ts,.js}"],
       synchronize: true,
