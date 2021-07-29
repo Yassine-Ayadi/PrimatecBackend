@@ -13,7 +13,7 @@ pipeline {
          sh 'npm install'
          //sh 'rm -rf ./dist'
         // sh 'npm run build'
-         sh 'curl http://localhost:8081'
+         sh 'curl http://localhost:8080'
          sh 'npm run start:prod'
         
       }
