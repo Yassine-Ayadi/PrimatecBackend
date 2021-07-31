@@ -1,7 +1,7 @@
 FROM node:latest
 WORKDIR usr/src/app
 COPY package*.json /usr/src/app/
-RUN npm install 
+RUN npm install --save @nestjs/core
 RUN rm -rf /usr/src/app
 ADD ./dist/* /usr/src/app/
 EXPOSE 8086 
