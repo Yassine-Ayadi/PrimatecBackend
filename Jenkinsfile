@@ -32,8 +32,8 @@ pipeline {
           //sh 'curl http://192.168.1.7:3306'
           //sh'npm run start:prod'
        // sh 'docker build -t angularproject:latest .'
-          sh 'curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
-          sh 'chmod +x /usr/local/bin/docker-compose'
+          sh 'sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
+          sh 'sudo chmod +x /usr/local/bin/docker-compose'
           sh 'docker-compose up'
 
       }
