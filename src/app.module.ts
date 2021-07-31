@@ -10,7 +10,7 @@ import { StudentModule } from './student/student.module';
   imports: [StudentModule,
    TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '192.168.1.7',//process.env.DB_HOST,
+      host: '192.168.1.3',//process.env.DB_HOST,
       port: 3306, //parseInt(process.env.DB_PORT),
       username: 'root', //process.env.DB_USERNAME,
       password: 'password123',// process.env.DB_PASSWORD,
