@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+    api:
+        
+        build:
+            dockerfile: Dockerfile
+            context: .
+        depends_on: 
+            - mysql
+        ports:
+            - "8086:3000"
+
+    mysql:
+        image: mysql:latest
+        ports:
+            - "35000:3306"
+        environment: 
+            MYSQL_ROOT_PASSWORD: password123
