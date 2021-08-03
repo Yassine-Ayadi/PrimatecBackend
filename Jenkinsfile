@@ -24,8 +24,9 @@ pipeline {
         CI = 'true'
         scannerHome = tool 'sonarqube'
     }
-    agent{ docker { image 'openjdk' }  }
-    agent{ docker { image 'node' }  }
+    agent{ docker { image 'openjdk'
+                    image 'node'}  }
+
     steps {
         withSonarQubeEnv('sonarqube') {
             sh "${scannerHome}/bin/sonar-scanner"
