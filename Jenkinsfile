@@ -1,4 +1,7 @@
 pipeline {
+    tools {
+        jdk 'jdk11'
+    }
     agent {
         docker {
             image 'node:latest' 
