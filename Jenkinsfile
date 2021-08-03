@@ -24,6 +24,7 @@ pipeline {
         scannerHome = tool 'sonarqube'
     }
     steps {
+        sh 'chmod 755 ${scannerHome}/bin/sonar-scanner-#.#.#.####-linux/jre/bin/java'
         withSonarQubeEnv('sonarqube') {
             sh "${scannerHome}/bin/sonar-scanner"
         }
