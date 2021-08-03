@@ -1,7 +1,4 @@
 pipeline {
-    tools {
-        jdk 'jdk11'
-    }
     agent {
         docker {
             image 'node:latest' 
@@ -24,8 +21,10 @@ pipeline {
     
    stage('Sonarqube') {
     environment {
+        CI = 'true'
         scannerHome = tool 'sonarqube'
     }
+    agent{ docker { image 'openjdk' }  }
     steps {
         withSonarQubeEnv('sonarqube') {
             sh "${scannerHome}/bin/sonar-scanner"
